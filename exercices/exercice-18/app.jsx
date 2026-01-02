@@ -1,14 +1,18 @@
 
+import React from 'react';
+
 function App() {
+  const [titleColor, setTitleColor] = React.useState(null);
+
   return (
     <div id="app">
-      <h1>CSS is great!</h1>
+      <h1 className={titleColor}>CSS is great!</h1>
       <menu>
         <li>
-          <button>Yes</button>
+          <button onClick={() => setTitleColor('highlight-green')}>Yes</button>
         </li>
         <li>
-          <button>No</button>
+          <button onClick={() => setTitleColor('highlight-red')}>No</button>
         </li>
       </menu>
     </div>
@@ -16,3 +20,4 @@ function App() {
 }
 
 export default App;
+
